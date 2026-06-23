@@ -1,0 +1,188 @@
+// Cohort-insights pipeline.
+//
+// Fetches real, public-domain US federal data and computes "people like you"
+// reference insights, decoupled from any app release. Output is plain JSON in
+// ../data so apps (Ask Monie) and teamam.org can consume it read-only.
+//
+// Sources (all public domain, no license required):
+//   - BLS OEWS  via api.bls.gov  -> earnings by occupation x metro x percentile
+//   - FRED      via fred CSV      -> national personal saving rate (reference)
+//
+// Every record carries its exact source series IDs + release period so any
+// number can be re-verified at the source. Insights are REFERENCE ONLY — see
+// DISCLAIMER in README; they are not reviewed by financial professionals and
+// can be outdated.
+//
+// Run:  node scripts/build.mjs        (no API key needed; stays within BLS v1 limits)
+
+import { writeFileSync, mkdirSync } from 'node:fs';
+
+const BLS_V1 = 'https://api.bls.gov/publicAPI/v1/timeseries/data/';
+
+// Designer-family occupations (SOC 2018). Extend freely.
+const ROLES = [
+  { soc: '271024', key: 'graphic-designer', label: 'Graphic Designer' },
+  { soc: '151255', key: 'web-digital-designer', label: 'Web & Digital Interface Designer' },
+  { soc: '271025', key: 'interior-designer', label: 'Interior Designer' },
+  { soc: '271021', key: 'industrial-designer', label: 'Commercial & Industrial Designer' },
+];
+
+// Areas: national + major metros (CBSA codes, 7-digit padded for OEWS).
+const AREAS = [
+  { type: 'N', code: '0000000', key: 'us', label: 'United States' },
+  { type: 'M', code: '0035620', key: 'nyc', label: 'New York–Newark–Jersey City, NY-NJ-PA' },
+  { type: 'M', code: '0041860', key: 'sf', label: 'San Francisco–Oakland–Berkeley, CA' },
+  { type: 'M', code: '0031080', key: 'la', label: 'Los Angeles–Long Beach–Anaheim, CA' },
+  { type: 'M', code: '0042660', key: 'seattle', label: 'Seattle–Tacoma–Bellevue, WA' },
+  { type: 'M', code: '0016980', key: 'chicago', label: 'Chicago–Naperville–Elgin, IL-IN-WI' },
+  { type: 'M', code: '0014460', key: 'boston', label: 'Boston–Cambridge–Newton, MA-NH' },
+];
+
+// OEWS datatype codes for annual wages.
+const DATATYPES = {
+  mean: '04',
+  p10: '11',
+  p25: '12',
+  median: '13',
+  p75: '14',
+  p90: '15',
+};
+
+const seriesId = (areaType, areaCode, soc, dt) =>
+  `OEU${areaType}${areaCode}000000${soc}${dt}`;
+
+// Build the full series list, remembering what each maps to.
+const wanted = [];
+for (const role of ROLES) {
+  for (const area of AREAS) {
+    for (const [metric, dt] of Object.entries(DATATYPES)) {
+      wanted.push({
+        id: seriesId(area.type, area.code, role.soc, dt),
+        roleKey: role.key,
+        areaKey: area.key,
+        metric,
+      });
+    }
+  }
+}
+
+async function fetchBatch(ids) {
+  const res = await fetch(BLS_V1, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ seriesid: ids }),
+  });
+  const json = await res.json();
+  if (json.status !== 'REQUEST_SUCCEEDED') {
+    throw new Error('BLS API: ' + JSON.stringify(json.message));
+  }
+  return json.Results.series;
+}
+
+// BLS v1 allows 25 series per request.
+function chunk(arr, n) {
+  const out = [];
+  for (let i = 0; i < arr.length; i += n) out.push(arr.slice(i, i + n));
+  return out;
+}
+
+async function fetchNationalSavingRate() {
+  // FRED PSAVERT: personal saving rate, % of disposable income, monthly.
+  const res = await fetch('https://fred.stlouisfed.org/graph/fredgraph.csv?id=PSAVERT');
+  const csv = await res.text();
+  const rows = csv.trim().split('\n').slice(1).map((r) => r.split(','));
+  const last = rows[rows.length - 1];
+  return { date: last[0], rate: Number(last[1]) };
+}
+
+async function main() {
+  console.log(`Fetching ${wanted.length} BLS OEWS series in ${chunk(wanted, 25).length} batches…`);
+  const valueById = {};
+  let releaseYear = null;
+  for (const batch of chunk(wanted, 25)) {
+    const series = await fetchBatch(batch.map((w) => w.id));
+    for (const s of series) {
+      const point = s.data?.[0];
+      if (point?.value) {
+        valueById[s.seriesID] = Number(point.value);
+        releaseYear = point.year;
+      }
+    }
+  }
+
+  const saving = await fetchNationalSavingRate();
+
+  // Assemble per role x area.
+  const roleByKey = Object.fromEntries(ROLES.map((r) => [r.key, r]));
+  const areaByKey = Object.fromEntries(AREAS.map((a) => [a.key, a]));
+  const cohorts = [];
+  for (const role of ROLES) {
+    for (const area of AREAS) {
+      const earn = {};
+      const sources = {};
+      let any = false;
+      for (const [metric, dt] of Object.entries(DATATYPES)) {
+        const id = seriesId(area.type, area.code, role.soc, dt);
+        if (valueById[id] != null) {
+          earn[metric] = valueById[id];
+          sources[metric] = id;
+          any = true;
+        }
+      }
+      if (!any) continue; // BLS suppresses some small metro x occupation cells
+      cohorts.push({
+        id: `${role.key}__${area.key}`,
+        role: role.label,
+        roleKey: role.key,
+        soc: role.soc,
+        area: area.label,
+        areaKey: area.key,
+        annualEarnings: earn, // mean, p10, p25, median, p75, p90
+        sourceSeries: sources,
+      });
+    }
+  }
+
+  const out = {
+    meta: {
+      generated: process.env.BUILD_DATE || 'set BUILD_DATE',
+      dataset: 'designer-earnings-by-metro',
+      earningsSource: 'BLS Occupational Employment and Wage Statistics (OEWS)',
+      earningsReleaseYear: releaseYear,
+      earningsApi: 'https://api.bls.gov/publicAPI/v1/timeseries/data/',
+      nationalSavingRate: {
+        value: saving.rate,
+        unit: 'percent of disposable personal income',
+        asOf: saving.date,
+        source: 'FRED PSAVERT (U.S. Bureau of Economic Analysis)',
+        note: 'National reference only — NOT specific to this occupation or metro.',
+      },
+      disclaimer:
+        'Reference only. Derived from public US federal data; not reviewed by ' +
+        'financial professionals and may be outdated. Verify against the cited ' +
+        'sources before relying on any figure.',
+    },
+    cohorts,
+  };
+
+  mkdirSync(new URL('../data/', import.meta.url), { recursive: true });
+  const path = new URL('../data/designer-earnings.json', import.meta.url);
+  writeFileSync(path, JSON.stringify(out, null, 2));
+  console.log(`Wrote ${cohorts.length} cohorts -> data/designer-earnings.json`);
+
+  // Self-verification: percentiles must be monotonic, and print a known value.
+  let monotonicFails = 0;
+  for (const c of cohorts) {
+    const e = c.annualEarnings;
+    const order = ['p10', 'p25', 'median', 'p75', 'p90'].map((k) => e[k]).filter((v) => v != null);
+    for (let i = 1; i < order.length; i++) if (order[i] < order[i - 1]) monotonicFails++;
+  }
+  const nycGd = cohorts.find((c) => c.id === 'graphic-designer__nyc');
+  console.log(`Self-check: monotonic percentile failures = ${monotonicFails}`);
+  console.log(`Self-check: NYC graphic designer median = $${nycGd?.annualEarnings.median}`);
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

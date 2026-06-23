@@ -1,0 +1,691 @@
+{
+  "meta": {
+    "generated": "2026-06-22",
+    "dataset": "designer-earnings-by-metro",
+    "earningsSource": "BLS Occupational Employment and Wage Statistics (OEWS)",
+    "earningsReleaseYear": "2025",
+    "earningsApi": "https://api.bls.gov/publicAPI/v1/timeseries/data/",
+    "nationalSavingRate": {
+      "value": 2.6,
+      "unit": "percent of disposable personal income",
+      "asOf": "2026-04-01",
+      "source": "FRED PSAVERT (U.S. Bureau of Economic Analysis)",
+      "note": "National reference only — NOT specific to this occupation or metro."
+    },
+    "disclaimer": "Reference only. Derived from public US federal data; not reviewed by financial professionals and may be outdated. Verify against the cited sources before relying on any figure."
+  },
+  "cohorts": [
+    {
+      "id": "graphic-designer__us",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "United States",
+      "areaKey": "us",
+      "annualEarnings": {
+        "mean": 70560,
+        "p10": 39520,
+        "p25": 49040,
+        "median": 62960,
+        "p75": 81830,
+        "p90": 104910
+      },
+      "sourceSeries": {
+        "mean": "OEUN000000000000027102404",
+        "p10": "OEUN000000000000027102411",
+        "p25": "OEUN000000000000027102412",
+        "median": "OEUN000000000000027102413",
+        "p75": "OEUN000000000000027102414",
+        "p90": "OEUN000000000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__nyc",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "New York–Newark–Jersey City, NY-NJ-PA",
+      "areaKey": "nyc",
+      "annualEarnings": {
+        "mean": 85950,
+        "p10": 47490,
+        "p25": 62040,
+        "median": 79280,
+        "p75": 102060,
+        "p90": 132520
+      },
+      "sourceSeries": {
+        "mean": "OEUM003562000000027102404",
+        "p10": "OEUM003562000000027102411",
+        "p25": "OEUM003562000000027102412",
+        "median": "OEUM003562000000027102413",
+        "p75": "OEUM003562000000027102414",
+        "p90": "OEUM003562000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__sf",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "San Francisco–Oakland–Berkeley, CA",
+      "areaKey": "sf",
+      "annualEarnings": {
+        "mean": 102130,
+        "p10": 54470,
+        "p25": 68680,
+        "median": 92050,
+        "p75": 115940,
+        "p90": 142460
+      },
+      "sourceSeries": {
+        "mean": "OEUM004186000000027102404",
+        "p10": "OEUM004186000000027102411",
+        "p25": "OEUM004186000000027102412",
+        "median": "OEUM004186000000027102413",
+        "p75": "OEUM004186000000027102414",
+        "p90": "OEUM004186000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__la",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "Los Angeles–Long Beach–Anaheim, CA",
+      "areaKey": "la",
+      "annualEarnings": {
+        "mean": 81680,
+        "p10": 45500,
+        "p25": 53790,
+        "median": 72400,
+        "p75": 95440,
+        "p90": 123590
+      },
+      "sourceSeries": {
+        "mean": "OEUM003108000000027102404",
+        "p10": "OEUM003108000000027102411",
+        "p25": "OEUM003108000000027102412",
+        "median": "OEUM003108000000027102413",
+        "p75": "OEUM003108000000027102414",
+        "p90": "OEUM003108000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__seattle",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "Seattle–Tacoma–Bellevue, WA",
+      "areaKey": "seattle",
+      "annualEarnings": {
+        "mean": 82290,
+        "p10": 51660,
+        "p25": 61140,
+        "median": 76720,
+        "p75": 98590,
+        "p90": 125220
+      },
+      "sourceSeries": {
+        "mean": "OEUM004266000000027102404",
+        "p10": "OEUM004266000000027102411",
+        "p25": "OEUM004266000000027102412",
+        "median": "OEUM004266000000027102413",
+        "p75": "OEUM004266000000027102414",
+        "p90": "OEUM004266000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__chicago",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "Chicago–Naperville–Elgin, IL-IN-WI",
+      "areaKey": "chicago",
+      "annualEarnings": {
+        "mean": 71470,
+        "p10": 43750,
+        "p25": 52030,
+        "median": 66490,
+        "p75": 83590,
+        "p90": 100620
+      },
+      "sourceSeries": {
+        "mean": "OEUM001698000000027102404",
+        "p10": "OEUM001698000000027102411",
+        "p25": "OEUM001698000000027102412",
+        "median": "OEUM001698000000027102413",
+        "p75": "OEUM001698000000027102414",
+        "p90": "OEUM001698000000027102415"
+      }
+    },
+    {
+      "id": "graphic-designer__boston",
+      "role": "Graphic Designer",
+      "roleKey": "graphic-designer",
+      "soc": "271024",
+      "area": "Boston–Cambridge–Newton, MA-NH",
+      "areaKey": "boston",
+      "annualEarnings": {
+        "mean": 82350,
+        "p10": 51440,
+        "p25": 61490,
+        "median": 78270,
+        "p75": 98260,
+        "p90": 116000
+      },
+      "sourceSeries": {
+        "mean": "OEUM001446000000027102404",
+        "p10": "OEUM001446000000027102411",
+        "p25": "OEUM001446000000027102412",
+        "median": "OEUM001446000000027102413",
+        "p75": "OEUM001446000000027102414",
+        "p90": "OEUM001446000000027102415"
+      }
+    },
+    {
+      "id": "web-digital-designer__us",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "United States",
+      "areaKey": "us",
+      "annualEarnings": {
+        "mean": 117490,
+        "p10": 53750,
+        "p25": 73290,
+        "median": 104000,
+        "p75": 158820,
+        "p90": 201550
+      },
+      "sourceSeries": {
+        "mean": "OEUN000000000000015125504",
+        "p10": "OEUN000000000000015125511",
+        "p25": "OEUN000000000000015125512",
+        "median": "OEUN000000000000015125513",
+        "p75": "OEUN000000000000015125514",
+        "p90": "OEUN000000000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__nyc",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "New York–Newark–Jersey City, NY-NJ-PA",
+      "areaKey": "nyc",
+      "annualEarnings": {
+        "mean": 130190,
+        "p10": 64360,
+        "p25": 96100,
+        "median": 119190,
+        "p75": 167660,
+        "p90": 204510
+      },
+      "sourceSeries": {
+        "mean": "OEUM003562000000015125504",
+        "p10": "OEUM003562000000015125511",
+        "p25": "OEUM003562000000015125512",
+        "median": "OEUM003562000000015125513",
+        "p75": "OEUM003562000000015125514",
+        "p90": "OEUM003562000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__sf",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "San Francisco–Oakland–Berkeley, CA",
+      "areaKey": "sf",
+      "annualEarnings": {
+        "mean": 161710,
+        "p10": 81120,
+        "p25": 110100,
+        "median": 163810,
+        "p75": 211120,
+        "p90": 230700
+      },
+      "sourceSeries": {
+        "mean": "OEUM004186000000015125504",
+        "p10": "OEUM004186000000015125511",
+        "p25": "OEUM004186000000015125512",
+        "median": "OEUM004186000000015125513",
+        "p75": "OEUM004186000000015125514",
+        "p90": "OEUM004186000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__la",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "Los Angeles–Long Beach–Anaheim, CA",
+      "areaKey": "la",
+      "annualEarnings": {
+        "mean": 124480,
+        "p10": 58100,
+        "p25": 78830,
+        "median": 106550,
+        "p75": 168500,
+        "p90": 201320
+      },
+      "sourceSeries": {
+        "mean": "OEUM003108000000015125504",
+        "p10": "OEUM003108000000015125511",
+        "p25": "OEUM003108000000015125512",
+        "median": "OEUM003108000000015125513",
+        "p75": "OEUM003108000000015125514",
+        "p90": "OEUM003108000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__seattle",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "Seattle–Tacoma–Bellevue, WA",
+      "areaKey": "seattle",
+      "annualEarnings": {
+        "mean": 138080,
+        "p10": 60580,
+        "p25": 75570,
+        "median": 133760,
+        "p75": 173020,
+        "p90": 217800
+      },
+      "sourceSeries": {
+        "mean": "OEUM004266000000015125504",
+        "p10": "OEUM004266000000015125511",
+        "p25": "OEUM004266000000015125512",
+        "median": "OEUM004266000000015125513",
+        "p75": "OEUM004266000000015125514",
+        "p90": "OEUM004266000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__chicago",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "Chicago–Naperville–Elgin, IL-IN-WI",
+      "areaKey": "chicago",
+      "annualEarnings": {
+        "mean": 101550,
+        "p10": 59450,
+        "p25": 73220,
+        "median": 87920,
+        "p75": 132290,
+        "p90": 162050
+      },
+      "sourceSeries": {
+        "mean": "OEUM001698000000015125504",
+        "p10": "OEUM001698000000015125511",
+        "p25": "OEUM001698000000015125512",
+        "median": "OEUM001698000000015125513",
+        "p75": "OEUM001698000000015125514",
+        "p90": "OEUM001698000000015125515"
+      }
+    },
+    {
+      "id": "web-digital-designer__boston",
+      "role": "Web & Digital Interface Designer",
+      "roleKey": "web-digital-designer",
+      "soc": "151255",
+      "area": "Boston–Cambridge–Newton, MA-NH",
+      "areaKey": "boston",
+      "annualEarnings": {
+        "mean": 123710,
+        "p10": 72860,
+        "p25": 86770,
+        "median": 122270,
+        "p75": 159540,
+        "p90": 178250
+      },
+      "sourceSeries": {
+        "mean": "OEUM001446000000015125504",
+        "p10": "OEUM001446000000015125511",
+        "p25": "OEUM001446000000015125512",
+        "median": "OEUM001446000000015125513",
+        "p75": "OEUM001446000000015125514",
+        "p90": "OEUM001446000000015125515"
+      }
+    },
+    {
+      "id": "interior-designer__us",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "United States",
+      "areaKey": "us",
+      "annualEarnings": {
+        "mean": 74540,
+        "p10": 41420,
+        "p25": 51840,
+        "median": 67190,
+        "p75": 85740,
+        "p90": 114140
+      },
+      "sourceSeries": {
+        "mean": "OEUN000000000000027102504",
+        "p10": "OEUN000000000000027102511",
+        "p25": "OEUN000000000000027102512",
+        "median": "OEUN000000000000027102513",
+        "p75": "OEUN000000000000027102514",
+        "p90": "OEUN000000000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__nyc",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "New York–Newark–Jersey City, NY-NJ-PA",
+      "areaKey": "nyc",
+      "annualEarnings": {
+        "mean": 77780,
+        "p10": 41220,
+        "p25": 49750,
+        "median": 76580,
+        "p75": 96400,
+        "p90": 125990
+      },
+      "sourceSeries": {
+        "mean": "OEUM003562000000027102504",
+        "p10": "OEUM003562000000027102511",
+        "p25": "OEUM003562000000027102512",
+        "median": "OEUM003562000000027102513",
+        "p75": "OEUM003562000000027102514",
+        "p90": "OEUM003562000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__sf",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "San Francisco–Oakland–Berkeley, CA",
+      "areaKey": "sf",
+      "annualEarnings": {
+        "mean": 99350,
+        "p10": 62220,
+        "p25": 76620,
+        "median": 87460,
+        "p75": 124420,
+        "p90": 149760
+      },
+      "sourceSeries": {
+        "mean": "OEUM004186000000027102504",
+        "p10": "OEUM004186000000027102511",
+        "p25": "OEUM004186000000027102512",
+        "median": "OEUM004186000000027102513",
+        "p75": "OEUM004186000000027102514",
+        "p90": "OEUM004186000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__la",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "Los Angeles–Long Beach–Anaheim, CA",
+      "areaKey": "la",
+      "annualEarnings": {
+        "mean": 88370,
+        "p10": 41740,
+        "p25": 58600,
+        "median": 80000,
+        "p75": 115180,
+        "p90": 131360
+      },
+      "sourceSeries": {
+        "mean": "OEUM003108000000027102504",
+        "p10": "OEUM003108000000027102511",
+        "p25": "OEUM003108000000027102512",
+        "median": "OEUM003108000000027102513",
+        "p75": "OEUM003108000000027102514",
+        "p90": "OEUM003108000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__seattle",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "Seattle–Tacoma–Bellevue, WA",
+      "areaKey": "seattle",
+      "annualEarnings": {
+        "mean": 85840,
+        "p10": 60540,
+        "p25": 71010,
+        "median": 78810,
+        "p75": 102680,
+        "p90": 124930
+      },
+      "sourceSeries": {
+        "mean": "OEUM004266000000027102504",
+        "p10": "OEUM004266000000027102511",
+        "p25": "OEUM004266000000027102512",
+        "median": "OEUM004266000000027102513",
+        "p75": "OEUM004266000000027102514",
+        "p90": "OEUM004266000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__chicago",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "Chicago–Naperville–Elgin, IL-IN-WI",
+      "areaKey": "chicago",
+      "annualEarnings": {
+        "mean": 88220,
+        "p10": 46800,
+        "p25": 61240,
+        "median": 76570,
+        "p75": 94810,
+        "p90": 131990
+      },
+      "sourceSeries": {
+        "mean": "OEUM001698000000027102504",
+        "p10": "OEUM001698000000027102511",
+        "p25": "OEUM001698000000027102512",
+        "median": "OEUM001698000000027102513",
+        "p75": "OEUM001698000000027102514",
+        "p90": "OEUM001698000000027102515"
+      }
+    },
+    {
+      "id": "interior-designer__boston",
+      "role": "Interior Designer",
+      "roleKey": "interior-designer",
+      "soc": "271025",
+      "area": "Boston–Cambridge–Newton, MA-NH",
+      "areaKey": "boston",
+      "annualEarnings": {
+        "mean": 85450,
+        "p10": 52570,
+        "p25": 62610,
+        "median": 81480,
+        "p75": 95410,
+        "p90": 125240
+      },
+      "sourceSeries": {
+        "mean": "OEUM001446000000027102504",
+        "p10": "OEUM001446000000027102511",
+        "p25": "OEUM001446000000027102512",
+        "median": "OEUM001446000000027102513",
+        "p75": "OEUM001446000000027102514",
+        "p90": "OEUM001446000000027102515"
+      }
+    },
+    {
+      "id": "industrial-designer__us",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "United States",
+      "areaKey": "us",
+      "annualEarnings": {
+        "mean": 93260,
+        "p10": 53460,
+        "p25": 66450,
+        "median": 83910,
+        "p75": 109050,
+        "p90": 139770
+      },
+      "sourceSeries": {
+        "mean": "OEUN000000000000027102104",
+        "p10": "OEUN000000000000027102111",
+        "p25": "OEUN000000000000027102112",
+        "median": "OEUN000000000000027102113",
+        "p75": "OEUN000000000000027102114",
+        "p90": "OEUN000000000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__nyc",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "New York–Newark–Jersey City, NY-NJ-PA",
+      "areaKey": "nyc",
+      "annualEarnings": {
+        "mean": 101220,
+        "p10": 63140,
+        "p25": 75400,
+        "median": 94890,
+        "p75": 120960,
+        "p90": 155210
+      },
+      "sourceSeries": {
+        "mean": "OEUM003562000000027102104",
+        "p10": "OEUM003562000000027102111",
+        "p25": "OEUM003562000000027102112",
+        "median": "OEUM003562000000027102113",
+        "p75": "OEUM003562000000027102114",
+        "p90": "OEUM003562000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__sf",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "San Francisco–Oakland–Berkeley, CA",
+      "areaKey": "sf",
+      "annualEarnings": {
+        "mean": 109560,
+        "p10": 73610,
+        "p25": 79520,
+        "median": 104000,
+        "p75": 116890,
+        "p90": 163010
+      },
+      "sourceSeries": {
+        "mean": "OEUM004186000000027102104",
+        "p10": "OEUM004186000000027102111",
+        "p25": "OEUM004186000000027102112",
+        "median": "OEUM004186000000027102113",
+        "p75": "OEUM004186000000027102114",
+        "p90": "OEUM004186000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__la",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "Los Angeles–Long Beach–Anaheim, CA",
+      "areaKey": "la",
+      "annualEarnings": {
+        "mean": 105280,
+        "p10": 62800,
+        "p25": 74270,
+        "median": 96260,
+        "p75": 131050,
+        "p90": 162140
+      },
+      "sourceSeries": {
+        "mean": "OEUM003108000000027102104",
+        "p10": "OEUM003108000000027102111",
+        "p25": "OEUM003108000000027102112",
+        "median": "OEUM003108000000027102113",
+        "p75": "OEUM003108000000027102114",
+        "p90": "OEUM003108000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__seattle",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "Seattle–Tacoma–Bellevue, WA",
+      "areaKey": "seattle",
+      "annualEarnings": {
+        "mean": 110450,
+        "p10": 63400,
+        "p25": 89320,
+        "median": 104980,
+        "p75": 130710,
+        "p90": 160880
+      },
+      "sourceSeries": {
+        "mean": "OEUM004266000000027102104",
+        "p10": "OEUM004266000000027102111",
+        "p25": "OEUM004266000000027102112",
+        "median": "OEUM004266000000027102113",
+        "p75": "OEUM004266000000027102114",
+        "p90": "OEUM004266000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__chicago",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "Chicago–Naperville–Elgin, IL-IN-WI",
+      "areaKey": "chicago",
+      "annualEarnings": {
+        "mean": 102010,
+        "p10": 63920,
+        "p25": 80040,
+        "median": 112950,
+        "p75": 112950,
+        "p90": 136090
+      },
+      "sourceSeries": {
+        "mean": "OEUM001698000000027102104",
+        "p10": "OEUM001698000000027102111",
+        "p25": "OEUM001698000000027102112",
+        "median": "OEUM001698000000027102113",
+        "p75": "OEUM001698000000027102114",
+        "p90": "OEUM001698000000027102115"
+      }
+    },
+    {
+      "id": "industrial-designer__boston",
+      "role": "Commercial & Industrial Designer",
+      "roleKey": "industrial-designer",
+      "soc": "271021",
+      "area": "Boston–Cambridge–Newton, MA-NH",
+      "areaKey": "boston",
+      "annualEarnings": {
+        "mean": 108370,
+        "p10": 77020,
+        "p25": 82020,
+        "median": 102530,
+        "p75": 132050,
+        "p90": 161370
+      },
+      "sourceSeries": {
+        "mean": "OEUM001446000000027102104",
+        "p10": "OEUM001446000000027102111",
+        "p25": "OEUM001446000000027102112",
+        "median": "OEUM001446000000027102113",
+        "p75": "OEUM001446000000027102114",
+        "p90": "OEUM001446000000027102115"
+      }
+    }
+  ]
+}
