@@ -19,12 +19,22 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 
 const BLS_V1 = 'https://api.bls.gov/publicAPI/v1/timeseries/data/';
 
-// Designer-family occupations (SOC 2018). Extend freely.
+// Occupations (SOC 2018). Bad codes simply return no data and are dropped, so
+// the set is self-protecting. Extend freely (BLS API caps ~600 series/day
+// without a key; add a registration key to widen further).
 const ROLES = [
   { soc: '271024', key: 'graphic-designer', label: 'Graphic Designer' },
   { soc: '151255', key: 'web-digital-designer', label: 'Web & Digital Interface Designer' },
   { soc: '271025', key: 'interior-designer', label: 'Interior Designer' },
   { soc: '271021', key: 'industrial-designer', label: 'Commercial & Industrial Designer' },
+  { soc: '151252', key: 'software-developer', label: 'Software Developer' },
+  { soc: '152051', key: 'data-scientist', label: 'Data Scientist' },
+  { soc: '132011', key: 'accountant', label: 'Accountant & Auditor' },
+  { soc: '112021', key: 'marketing-manager', label: 'Marketing Manager' },
+  { soc: '291141', key: 'registered-nurse', label: 'Registered Nurse' },
+  { soc: '132051', key: 'financial-analyst', label: 'Financial & Investment Analyst' },
+  { soc: '172071', key: 'electrical-engineer', label: 'Electrical Engineer' },
+  { soc: '119111', key: 'health-services-manager', label: 'Medical & Health Services Manager' },
 ];
 
 // Areas: national + major metros (CBSA codes, 7-digit padded for OEWS).
@@ -36,6 +46,7 @@ const AREAS = [
   { type: 'M', code: '0042660', key: 'seattle', label: 'Seattle–Tacoma–Bellevue, WA' },
   { type: 'M', code: '0016980', key: 'chicago', label: 'Chicago–Naperville–Elgin, IL-IN-WI' },
   { type: 'M', code: '0014460', key: 'boston', label: 'Boston–Cambridge–Newton, MA-NH' },
+  { type: 'M', code: '0047900', key: 'dc', label: 'Washington–Arlington–Alexandria, DC-VA-MD-WV' },
 ];
 
 // OEWS datatype codes for annual wages.
