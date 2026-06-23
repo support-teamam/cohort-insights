@@ -5,6 +5,7 @@
     "earningsSource": "BLS Occupational Employment and Wage Statistics (OEWS)",
     "earningsReleaseYear": "2025",
     "earningsApi": "https://api.bls.gov/publicAPI/v1/timeseries/data/",
+    "narrativeMethod": "Headlines/narratives are templated framing filled deterministically from the verified numbers — readable, but no figure is model-invented.",
     "nationalSavingRate": {
       "value": 2.6,
       "unit": "percent of disposable personal income",
@@ -30,6 +31,35 @@
         "p75": 81830,
         "p90": 104910
       },
+      "headline": "Graphic Designers earn about $62,960 a year (U.S. median).",
+      "narrative": "Half earn between $49,040 and $81,830. The top 10% clear $104,910; the bottom 10% are near $39,520.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 39520
+          },
+          {
+            "label": "25th",
+            "value": 49040
+          },
+          {
+            "label": "median",
+            "value": 62960
+          },
+          {
+            "label": "75th",
+            "value": 81830
+          },
+          {
+            "label": "90th",
+            "value": 104910
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUN000000000000027102404",
         "p10": "OEUN000000000000027102411",
@@ -53,6 +83,35 @@
         "median": 79280,
         "p75": 102060,
         "p90": 132520
+      },
+      "headline": "Graphic Designers in New York earn about $79,280 a year — 26% above the U.S. median.",
+      "narrative": "Half earn between $62,040 and $102,060. The top 10% clear $132,520; the bottom 10% are near $47,490. A bigger paycheck in New York usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 47490
+          },
+          {
+            "label": "25th",
+            "value": 62040
+          },
+          {
+            "label": "median",
+            "value": 79280
+          },
+          {
+            "label": "75th",
+            "value": 102060
+          },
+          {
+            "label": "90th",
+            "value": 132520
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM003562000000027102404",
@@ -78,6 +137,35 @@
         "p75": 115940,
         "p90": 142460
       },
+      "headline": "Graphic Designers in San Francisco earn about $92,050 a year — 46% above the U.S. median.",
+      "narrative": "Half earn between $68,680 and $115,940. The top 10% clear $142,460; the bottom 10% are near $54,470. A bigger paycheck in San Francisco usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 54470
+          },
+          {
+            "label": "25th",
+            "value": 68680
+          },
+          {
+            "label": "median",
+            "value": 92050
+          },
+          {
+            "label": "75th",
+            "value": 115940
+          },
+          {
+            "label": "90th",
+            "value": 142460
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM004186000000027102404",
         "p10": "OEUM004186000000027102411",
@@ -101,6 +189,35 @@
         "median": 72400,
         "p75": 95440,
         "p90": 123590
+      },
+      "headline": "Graphic Designers in Los Angeles earn about $72,400 a year — 15% above the U.S. median.",
+      "narrative": "Half earn between $53,790 and $95,440. The top 10% clear $123,590; the bottom 10% are near $45,500. A bigger paycheck in Los Angeles usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 45500
+          },
+          {
+            "label": "25th",
+            "value": 53790
+          },
+          {
+            "label": "median",
+            "value": 72400
+          },
+          {
+            "label": "75th",
+            "value": 95440
+          },
+          {
+            "label": "90th",
+            "value": 123590
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM003108000000027102404",
@@ -126,6 +243,35 @@
         "p75": 98590,
         "p90": 125220
       },
+      "headline": "Graphic Designers in Seattle earn about $76,720 a year — 22% above the U.S. median.",
+      "narrative": "Half earn between $61,140 and $98,590. The top 10% clear $125,220; the bottom 10% are near $51,660. A bigger paycheck in Seattle usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 51660
+          },
+          {
+            "label": "25th",
+            "value": 61140
+          },
+          {
+            "label": "median",
+            "value": 76720
+          },
+          {
+            "label": "75th",
+            "value": 98590
+          },
+          {
+            "label": "90th",
+            "value": 125220
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM004266000000027102404",
         "p10": "OEUM004266000000027102411",
@@ -149,6 +295,35 @@
         "median": 66490,
         "p75": 83590,
         "p90": 100620
+      },
+      "headline": "Graphic Designers in Chicago earn about $66,490 a year — 6% above the U.S. median.",
+      "narrative": "Half earn between $52,030 and $83,590. The top 10% clear $100,620; the bottom 10% are near $43,750. A bigger paycheck in Chicago usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 43750
+          },
+          {
+            "label": "25th",
+            "value": 52030
+          },
+          {
+            "label": "median",
+            "value": 66490
+          },
+          {
+            "label": "75th",
+            "value": 83590
+          },
+          {
+            "label": "90th",
+            "value": 100620
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM001698000000027102404",
@@ -174,6 +349,35 @@
         "p75": 98260,
         "p90": 116000
       },
+      "headline": "Graphic Designers in Boston earn about $78,270 a year — 24% above the U.S. median.",
+      "narrative": "Half earn between $61,490 and $98,260. The top 10% clear $116,000; the bottom 10% are near $51,440. A bigger paycheck in Boston usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 51440
+          },
+          {
+            "label": "25th",
+            "value": 61490
+          },
+          {
+            "label": "median",
+            "value": 78270
+          },
+          {
+            "label": "75th",
+            "value": 98260
+          },
+          {
+            "label": "90th",
+            "value": 116000
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM001446000000027102404",
         "p10": "OEUM001446000000027102411",
@@ -197,6 +401,35 @@
         "median": 104000,
         "p75": 158820,
         "p90": 201550
+      },
+      "headline": "Web & Digital Interface Designers earn about $104,000 a year (U.S. median).",
+      "narrative": "Half earn between $73,290 and $158,820. The top 10% clear $201,550; the bottom 10% are near $53,750.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 53750
+          },
+          {
+            "label": "25th",
+            "value": 73290
+          },
+          {
+            "label": "median",
+            "value": 104000
+          },
+          {
+            "label": "75th",
+            "value": 158820
+          },
+          {
+            "label": "90th",
+            "value": 201550
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUN000000000000015125504",
@@ -222,6 +455,35 @@
         "p75": 167660,
         "p90": 204510
       },
+      "headline": "Web & Digital Interface Designers in New York earn about $119,190 a year — 15% above the U.S. median.",
+      "narrative": "Half earn between $96,100 and $167,660. The top 10% clear $204,510; the bottom 10% are near $64,360. A bigger paycheck in New York usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 64360
+          },
+          {
+            "label": "25th",
+            "value": 96100
+          },
+          {
+            "label": "median",
+            "value": 119190
+          },
+          {
+            "label": "75th",
+            "value": 167660
+          },
+          {
+            "label": "90th",
+            "value": 204510
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM003562000000015125504",
         "p10": "OEUM003562000000015125511",
@@ -245,6 +507,35 @@
         "median": 163810,
         "p75": 211120,
         "p90": 230700
+      },
+      "headline": "Web & Digital Interface Designers in San Francisco earn about $163,810 a year — 58% above the U.S. median.",
+      "narrative": "Half earn between $110,100 and $211,120. The top 10% clear $230,700; the bottom 10% are near $81,120. A bigger paycheck in San Francisco usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 81120
+          },
+          {
+            "label": "25th",
+            "value": 110100
+          },
+          {
+            "label": "median",
+            "value": 163810
+          },
+          {
+            "label": "75th",
+            "value": 211120
+          },
+          {
+            "label": "90th",
+            "value": 230700
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM004186000000015125504",
@@ -270,6 +561,35 @@
         "p75": 168500,
         "p90": 201320
       },
+      "headline": "Web & Digital Interface Designers in Los Angeles earn about $106,550 a year — 2% above the U.S. median.",
+      "narrative": "Half earn between $78,830 and $168,500. The top 10% clear $201,320; the bottom 10% are near $58,100. A bigger paycheck in Los Angeles usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 58100
+          },
+          {
+            "label": "25th",
+            "value": 78830
+          },
+          {
+            "label": "median",
+            "value": 106550
+          },
+          {
+            "label": "75th",
+            "value": 168500
+          },
+          {
+            "label": "90th",
+            "value": 201320
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM003108000000015125504",
         "p10": "OEUM003108000000015125511",
@@ -293,6 +613,35 @@
         "median": 133760,
         "p75": 173020,
         "p90": 217800
+      },
+      "headline": "Web & Digital Interface Designers in Seattle earn about $133,760 a year — 29% above the U.S. median.",
+      "narrative": "Half earn between $75,570 and $173,020. The top 10% clear $217,800; the bottom 10% are near $60,580. A bigger paycheck in Seattle usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 60580
+          },
+          {
+            "label": "25th",
+            "value": 75570
+          },
+          {
+            "label": "median",
+            "value": 133760
+          },
+          {
+            "label": "75th",
+            "value": 173020
+          },
+          {
+            "label": "90th",
+            "value": 217800
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM004266000000015125504",
@@ -318,6 +667,35 @@
         "p75": 132290,
         "p90": 162050
       },
+      "headline": "Web & Digital Interface Designers in Chicago earn about $87,920 a year — 15% below the U.S. median.",
+      "narrative": "Half earn between $73,220 and $132,290. The top 10% clear $162,050; the bottom 10% are near $59,450. A bigger paycheck in Chicago usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 59450
+          },
+          {
+            "label": "25th",
+            "value": 73220
+          },
+          {
+            "label": "median",
+            "value": 87920
+          },
+          {
+            "label": "75th",
+            "value": 132290
+          },
+          {
+            "label": "90th",
+            "value": 162050
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM001698000000015125504",
         "p10": "OEUM001698000000015125511",
@@ -341,6 +719,35 @@
         "median": 122270,
         "p75": 159540,
         "p90": 178250
+      },
+      "headline": "Web & Digital Interface Designers in Boston earn about $122,270 a year — 18% above the U.S. median.",
+      "narrative": "Half earn between $86,770 and $159,540. The top 10% clear $178,250; the bottom 10% are near $72,860. A bigger paycheck in Boston usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 72860
+          },
+          {
+            "label": "25th",
+            "value": 86770
+          },
+          {
+            "label": "median",
+            "value": 122270
+          },
+          {
+            "label": "75th",
+            "value": 159540
+          },
+          {
+            "label": "90th",
+            "value": 178250
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM001446000000015125504",
@@ -366,6 +773,35 @@
         "p75": 85740,
         "p90": 114140
       },
+      "headline": "Interior Designers earn about $67,190 a year (U.S. median).",
+      "narrative": "Half earn between $51,840 and $85,740. The top 10% clear $114,140; the bottom 10% are near $41,420.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 41420
+          },
+          {
+            "label": "25th",
+            "value": 51840
+          },
+          {
+            "label": "median",
+            "value": 67190
+          },
+          {
+            "label": "75th",
+            "value": 85740
+          },
+          {
+            "label": "90th",
+            "value": 114140
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUN000000000000027102504",
         "p10": "OEUN000000000000027102511",
@@ -389,6 +825,35 @@
         "median": 76580,
         "p75": 96400,
         "p90": 125990
+      },
+      "headline": "Interior Designers in New York earn about $76,580 a year — 14% above the U.S. median.",
+      "narrative": "Half earn between $49,750 and $96,400. The top 10% clear $125,990; the bottom 10% are near $41,220. A bigger paycheck in New York usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 41220
+          },
+          {
+            "label": "25th",
+            "value": 49750
+          },
+          {
+            "label": "median",
+            "value": 76580
+          },
+          {
+            "label": "75th",
+            "value": 96400
+          },
+          {
+            "label": "90th",
+            "value": 125990
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM003562000000027102504",
@@ -414,6 +879,35 @@
         "p75": 124420,
         "p90": 149760
       },
+      "headline": "Interior Designers in San Francisco earn about $87,460 a year — 30% above the U.S. median.",
+      "narrative": "Half earn between $76,620 and $124,420. The top 10% clear $149,760; the bottom 10% are near $62,220. A bigger paycheck in San Francisco usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 62220
+          },
+          {
+            "label": "25th",
+            "value": 76620
+          },
+          {
+            "label": "median",
+            "value": 87460
+          },
+          {
+            "label": "75th",
+            "value": 124420
+          },
+          {
+            "label": "90th",
+            "value": 149760
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM004186000000027102504",
         "p10": "OEUM004186000000027102511",
@@ -437,6 +931,35 @@
         "median": 80000,
         "p75": 115180,
         "p90": 131360
+      },
+      "headline": "Interior Designers in Los Angeles earn about $80,000 a year — 19% above the U.S. median.",
+      "narrative": "Half earn between $58,600 and $115,180. The top 10% clear $131,360; the bottom 10% are near $41,740. A bigger paycheck in Los Angeles usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 41740
+          },
+          {
+            "label": "25th",
+            "value": 58600
+          },
+          {
+            "label": "median",
+            "value": 80000
+          },
+          {
+            "label": "75th",
+            "value": 115180
+          },
+          {
+            "label": "90th",
+            "value": 131360
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM003108000000027102504",
@@ -462,6 +985,35 @@
         "p75": 102680,
         "p90": 124930
       },
+      "headline": "Interior Designers in Seattle earn about $78,810 a year — 17% above the U.S. median.",
+      "narrative": "Half earn between $71,010 and $102,680. The top 10% clear $124,930; the bottom 10% are near $60,540. A bigger paycheck in Seattle usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 60540
+          },
+          {
+            "label": "25th",
+            "value": 71010
+          },
+          {
+            "label": "median",
+            "value": 78810
+          },
+          {
+            "label": "75th",
+            "value": 102680
+          },
+          {
+            "label": "90th",
+            "value": 124930
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM004266000000027102504",
         "p10": "OEUM004266000000027102511",
@@ -485,6 +1037,35 @@
         "median": 76570,
         "p75": 94810,
         "p90": 131990
+      },
+      "headline": "Interior Designers in Chicago earn about $76,570 a year — 14% above the U.S. median.",
+      "narrative": "Half earn between $61,240 and $94,810. The top 10% clear $131,990; the bottom 10% are near $46,800. A bigger paycheck in Chicago usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 46800
+          },
+          {
+            "label": "25th",
+            "value": 61240
+          },
+          {
+            "label": "median",
+            "value": 76570
+          },
+          {
+            "label": "75th",
+            "value": 94810
+          },
+          {
+            "label": "90th",
+            "value": 131990
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM001698000000027102504",
@@ -510,6 +1091,35 @@
         "p75": 95410,
         "p90": 125240
       },
+      "headline": "Interior Designers in Boston earn about $81,480 a year — 21% above the U.S. median.",
+      "narrative": "Half earn between $62,610 and $95,410. The top 10% clear $125,240; the bottom 10% are near $52,570. A bigger paycheck in Boston usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 52570
+          },
+          {
+            "label": "25th",
+            "value": 62610
+          },
+          {
+            "label": "median",
+            "value": 81480
+          },
+          {
+            "label": "75th",
+            "value": 95410
+          },
+          {
+            "label": "90th",
+            "value": 125240
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM001446000000027102504",
         "p10": "OEUM001446000000027102511",
@@ -533,6 +1143,35 @@
         "median": 83910,
         "p75": 109050,
         "p90": 139770
+      },
+      "headline": "Commercial & Industrial Designers earn about $83,910 a year (U.S. median).",
+      "narrative": "Half earn between $66,450 and $109,050. The top 10% clear $139,770; the bottom 10% are near $53,460.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 53460
+          },
+          {
+            "label": "25th",
+            "value": 66450
+          },
+          {
+            "label": "median",
+            "value": 83910
+          },
+          {
+            "label": "75th",
+            "value": 109050
+          },
+          {
+            "label": "90th",
+            "value": 139770
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUN000000000000027102104",
@@ -558,6 +1197,35 @@
         "p75": 120960,
         "p90": 155210
       },
+      "headline": "Commercial & Industrial Designers in New York earn about $94,890 a year — 13% above the U.S. median.",
+      "narrative": "Half earn between $75,400 and $120,960. The top 10% clear $155,210; the bottom 10% are near $63,140. A bigger paycheck in New York usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 63140
+          },
+          {
+            "label": "25th",
+            "value": 75400
+          },
+          {
+            "label": "median",
+            "value": 94890
+          },
+          {
+            "label": "75th",
+            "value": 120960
+          },
+          {
+            "label": "90th",
+            "value": 155210
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM003562000000027102104",
         "p10": "OEUM003562000000027102111",
@@ -581,6 +1249,35 @@
         "median": 104000,
         "p75": 116890,
         "p90": 163010
+      },
+      "headline": "Commercial & Industrial Designers in San Francisco earn about $104,000 a year — 24% above the U.S. median.",
+      "narrative": "Half earn between $79,520 and $116,890. The top 10% clear $163,010; the bottom 10% are near $73,610. A bigger paycheck in San Francisco usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 73610
+          },
+          {
+            "label": "25th",
+            "value": 79520
+          },
+          {
+            "label": "median",
+            "value": 104000
+          },
+          {
+            "label": "75th",
+            "value": 116890
+          },
+          {
+            "label": "90th",
+            "value": 163010
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM004186000000027102104",
@@ -606,6 +1303,35 @@
         "p75": 131050,
         "p90": 162140
       },
+      "headline": "Commercial & Industrial Designers in Los Angeles earn about $96,260 a year — 15% above the U.S. median.",
+      "narrative": "Half earn between $74,270 and $131,050. The top 10% clear $162,140; the bottom 10% are near $62,800. A bigger paycheck in Los Angeles usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 62800
+          },
+          {
+            "label": "25th",
+            "value": 74270
+          },
+          {
+            "label": "median",
+            "value": 96260
+          },
+          {
+            "label": "75th",
+            "value": 131050
+          },
+          {
+            "label": "90th",
+            "value": 162140
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM003108000000027102104",
         "p10": "OEUM003108000000027102111",
@@ -629,6 +1355,35 @@
         "median": 104980,
         "p75": 130710,
         "p90": 160880
+      },
+      "headline": "Commercial & Industrial Designers in Seattle earn about $104,980 a year — 25% above the U.S. median.",
+      "narrative": "Half earn between $89,320 and $130,710. The top 10% clear $160,880; the bottom 10% are near $63,400. A bigger paycheck in Seattle usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 63400
+          },
+          {
+            "label": "25th",
+            "value": 89320
+          },
+          {
+            "label": "median",
+            "value": 104980
+          },
+          {
+            "label": "75th",
+            "value": 130710
+          },
+          {
+            "label": "90th",
+            "value": 160880
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM004266000000027102104",
@@ -654,6 +1409,35 @@
         "p75": 112950,
         "p90": 136090
       },
+      "headline": "Commercial & Industrial Designers in Chicago earn about $112,950 a year — 35% above the U.S. median.",
+      "narrative": "Half earn between $80,040 and $112,950. The top 10% clear $136,090; the bottom 10% are near $63,920. A bigger paycheck in Chicago usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 63920
+          },
+          {
+            "label": "25th",
+            "value": 80040
+          },
+          {
+            "label": "median",
+            "value": 112950
+          },
+          {
+            "label": "75th",
+            "value": 112950
+          },
+          {
+            "label": "90th",
+            "value": 136090
+          }
+        ]
+      },
       "sourceSeries": {
         "mean": "OEUM001698000000027102104",
         "p10": "OEUM001698000000027102111",
@@ -677,6 +1461,35 @@
         "median": 102530,
         "p75": 132050,
         "p90": 161370
+      },
+      "headline": "Commercial & Industrial Designers in Boston earn about $102,530 a year — 22% above the U.S. median.",
+      "narrative": "Half earn between $82,020 and $132,050. The top 10% clear $161,370; the bottom 10% are near $77,020. A bigger paycheck in Boston usually comes with higher living costs, so it doesn't automatically mean more saved.",
+      "chartSpec": {
+        "type": "percentileBar",
+        "currency": "USD",
+        "highlight": "median",
+        "points": [
+          {
+            "label": "10th",
+            "value": 77020
+          },
+          {
+            "label": "25th",
+            "value": 82020
+          },
+          {
+            "label": "median",
+            "value": 102530
+          },
+          {
+            "label": "75th",
+            "value": 132050
+          },
+          {
+            "label": "90th",
+            "value": 161370
+          }
+        ]
       },
       "sourceSeries": {
         "mean": "OEUM001446000000027102104",
