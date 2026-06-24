@@ -13,7 +13,8 @@
       "source": "FRED PSAVERT (U.S. Bureau of Economic Analysis)",
       "note": "National reference only — NOT specific to this occupation or metro."
     },
-    "disclaimer": "Reference only. Derived from public US federal data; not reviewed by financial professionals and may be outdated. Verify against the cited sources before relying on any figure."
+    "disclaimer": "Reference only. Derived from public US federal data; not reviewed by financial professionals and may be outdated. Verify against the cited sources before relying on any figure.",
+    "schemaVersion": 1
   },
   "cohorts": [
     {
